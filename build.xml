@@ -16,6 +16,7 @@
     <path id="HelloWorld.classpath">
         <pathelement location="bin"/>
         <path refid="JUnit 4.libraryclasspath"/>
+        <pathelement location="jars/junit.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -40,13 +41,21 @@
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
     <target name="HelloWorld">
         <java classname="HelloWorld" failonerror="true" fork="yes">
-            <classpath refid="HelloWorld.classpath"/>
-        </java>
-    </target>
-    <target name="HelloWorld (1)">
-        <java classname="helloworld.core.HelloWorld" failonerror="true" fork="yes">
             <classpath refid="HelloWorld.classpath"/>
         </java>
     </target>

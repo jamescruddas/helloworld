@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>jars/junit.jar</name>
+			<type>1</type>
+			<location>C:/Users/crudd/Documents/Source/HelloWorldJava/helloworld/jars/junit.jar</location>
+		</link>
+	</linkedResources>
 </projectDescription>
