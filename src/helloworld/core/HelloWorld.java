@@ -3,8 +3,6 @@
  */
 package helloworld.core;
 
-import helloworld.core.HelloWorldHelper;
-
 /**
  * @author James Cruddas
  * Application entry method

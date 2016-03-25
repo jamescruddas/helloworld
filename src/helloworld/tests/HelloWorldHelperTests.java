@@ -1,11 +1,8 @@
 package helloworld.tests;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
-
 import helloworld.core.HelloWorldHelper;
-import junit.framework.Assert;
 
 public class HelloWorldHelperTests {
 
