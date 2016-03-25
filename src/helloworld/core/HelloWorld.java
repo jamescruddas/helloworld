@@ -3,6 +3,8 @@
  */
 package helloworld.core;
 
+import helloworld.core.HelloWorldHelper;
+
 /**
  * @author James Cruddas
  * Application entry method
@@ -13,6 +15,8 @@ public class HelloWorld {
 	 * @param args Default args array
 	 */
 	public static void main(String[] args) {
-		System.out.println("Hello Jenkins!");
+		HelloWorldHelper helper = new HelloWorldHelper();
+		String call = helper.SaySomething("Hello Jenkins!");
+		System.out.println(call);
 	}
 }
