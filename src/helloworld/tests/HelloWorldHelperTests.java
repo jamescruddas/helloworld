@@ -19,6 +19,7 @@ public class HelloWorldHelperTests {
 	public void HelloWorldHelperReturnsSameString() {
 		String testString = "Hello Jenkins";
 		String helperReturnedString = helloWorldHelper.SaySomething(testString);
+		helperReturnedString += "!";
 		assertEquals(testString, helperReturnedString);
 	}
 }
