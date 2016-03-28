@@ -12,7 +12,7 @@ public class HelloWorldHelperTests {
 	public void HelloWorldHelperReturnsAPopulatedString() {
 		String testString = "Hello Jenkins";
 		String helperReturnedString = helloWorldHelper.SaySomething(testString);
-		assertNull(helperReturnedString);
+		assertNotNull(helperReturnedString);
 	}
 	
 	@Test
