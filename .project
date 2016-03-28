@@ -16,14 +16,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>jars/junit.jar</name>
+			<name>lib/test/junit.jar</name>
 			<type>1</type>
-			<location>C:/Users/crudd/Documents/Source/HelloWorldJava/helloworld/jars/junit.jar</location>
+			<location>C:/Users/crudd/Documents/Source/HelloWorldJava/helloworld/lib/test/junit.jar</location>
 		</link>
 		<link>
-			<name>jars/org.hamcrest.core_1.3.0.v201303031735.jar</name>
+			<name>lib/test/org.hamcrest.core_1.3.0.v201303031735.jar</name>
 			<type>1</type>
-			<location>C:/Users/crudd/Documents/Source/HelloWorldJava/helloworld/jars/org.hamcrest.core_1.3.0.v201303031735.jar</location>
+			<location>C:/Users/crudd/Documents/Source/HelloWorldJava/helloworld/lib/test/org.hamcrest.core_1.3.0.v201303031735.jar</location>
 		</link>
 	</linkedResources>
 </projectDescription>
