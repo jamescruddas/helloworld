@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project basedir="." default="build" name="HelloWorld">
-    <property environment="env"/>
-    <property name="junit.output.dir" value="junit"/>
+	<tstamp>
+	    <format property="LastUpdated" pattern="yyyyMMddHHmmss" />
+	</tstamp>	
+	<property environment="env"/>
+    <property name="junit.output.dir" value="junit/${LastUpdated}"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
@@ -45,16 +48,17 @@
             <test name="helloworld.tests.HelloWorldHelperTests" todir="${junit.output.dir}"/>
             <classpath refid="HelloWorld.classpath"/>
         </junit>
-    </target>
+    </target>	
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
-                <include name="TEST-*.xml"/>
+                <include name="${lastUpdated}.*.xml"/>
             </fileset>
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
-    </target>     	
-  	<target name="dist" depends="clean, build, test">
+    </target>  
+			
+	<target name="dist" depends="clean, build">
         <mkdir dir="dist"/>
         <war destfile="dist/HelloWorld.war"
              basedir="WebContent"
